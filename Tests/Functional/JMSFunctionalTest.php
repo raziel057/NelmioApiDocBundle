@@ -138,6 +138,10 @@ class JMSFunctionalTest extends WebTestCase
                 'best_friend' => [
                     '$ref' => '#/components/schemas/User',
                 ],
+                'brother' => [
+                    '$ref' => '#/components/schemas/User',
+                    'nullable' => true
+                ],
                 'status' => [
                     'type' => 'string',
                     'title' => 'Whether this user is enabled or disabled.',
