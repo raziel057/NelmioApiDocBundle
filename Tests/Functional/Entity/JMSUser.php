@@ -12,6 +12,7 @@
 namespace Nelmio\ApiDocBundle\Tests\Functional\Entity;
 
 use JMS\Serializer\Annotation as Serializer;
+use Nelmio\ApiDocBundle\Annotation\Model;
 use OpenApi\Annotations as OA;
 
 /**
@@ -122,6 +123,13 @@ class JMSUser
      * @Serializer\Expose
      */
     private $bestFriend;
+
+    /**
+     * @Serializer\Expose
+     *
+     * @OA\Property(ref=@Model(type=User::class), nullable=true)
+     */
+    private $brother;
 
     /**
      * Whether this user is enabled or disabled.
